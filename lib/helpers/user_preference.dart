@@ -51,14 +51,14 @@ class UserPreference {
     _prefers.setBool('estadoCivil', valueestadoCivil);
   }
 
-  get favoriteMusic {
-    return _prefers.getStringList('music') ?? [];
+  get musicaFavorita {
+    return _prefers.getStringList('musica') ?? [];
   }
 
   // aca se va a sobreescribir a lista completa, pero tambien se pueden  usar metodos que tienen las listas
   // para hacer transacciones como agregar, actualizar, eliinar
-  set favoriteMusic(List<String> valueMusic) {
-    _prefers.setStringList('music', valueMusic);
+  set musicaFavorita(List<String> valueMusica) {
+    _prefers.setStringList('musica', valueMusica);
   }
 
   clean() {
@@ -66,5 +66,6 @@ class UserPreference {
     apellido = '';
     edad = 0;
     estadoCivil = false;
+    musicaFavorita = [];
   }
 }
